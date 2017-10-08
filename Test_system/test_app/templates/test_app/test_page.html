@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #myfieldclass {
+    height:50%;
+    }
+    .myfieldclass {
+    height:50%;
+    }
+
+</style>
+<body>
+{%for user in users%}
+<div>{{user.name}}, {{user.id}}, {{user.group_in}}</div>
+{%endfor%}
+<form method="POST" class="post-form">{% csrf_token %}
+    {{ form }}
+    <button type="submit" action = "http://127.0.0.1:8000/user_list" class="save btn btn-default">Save</button>
+</form>
+
+</body>
+</html>

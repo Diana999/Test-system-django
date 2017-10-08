@@ -1,0 +1,7 @@
+Инструкция.
+1) Распаковать архив
+2) В терминале зайти сначала в папку Test_system
+3) Выполнить следующие команды
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 

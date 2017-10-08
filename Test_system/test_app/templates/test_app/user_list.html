@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+    <div style="background-color:#dff0d8;
+        border-color:#d6e9c6;color:#3c763d; height: 20px;
+        width: 15%;"> {{message}}</div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{%for user in users%}
+<div>{{user.name}}</div>
+{%endfor%}
+
+<a href="http://127.0.0.1:8000/new_user" > Создать нового пользователя</a>
+
+</body>
+</html>

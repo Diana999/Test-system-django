@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .alert-success {
+    background-color:#dff0d8;
+    border-color:#d6e9c6;color:#3c763d
+    }
+
+</style>
+<body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+    <div style="background-color:#dff0d8;
+        border-color:#d6e9c6;color:#3c763d; height: 20px;
+        width: 15%;"> {{message}}</div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div style="background-color:#dff0d8;
+        border-color:#d6e9c6;color:#3c763d"> {{message}}
+    </div>
+    <a href="http://127.0.0.1:8000/test_list" > Создать новый тест</a><br>
+
+    <a href="http://127.0.0.1:8000/user_list" > Создать пользователя</a><br>
+    <a href="http://127.0.0.1:8000/group_list" >Создать группу</a><br>
+     <a href="http://127.0.0.1:8000/send_message" >Отправить сообщение</a><br>
+    <a href="http://127.0.0.1:8000/review" >Создать отчет</a><br>
+
+
+{{review}}
+{{test}}
+{{groups}}
+{{num_groups}}
+{% for key, value in dict.items%}
+{{key}}<br>
+{{value}}
+{%endfor%}
+
+{{users}}
+
+{{nums}}
+
+
+</body>
+</html>
